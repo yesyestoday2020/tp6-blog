@@ -2,10 +2,6 @@
 
 # 项目概述
 
-# 项目概述
-
-# 项目概述
-
 使用技术：`ThinkPHP` + `Bootstrap` + `Layui` + `Jquery`
 
 版本:
@@ -15,7 +11,7 @@
 
 `ThinkPHP` : 6.0.3
 
-`X-admin` :2.
+`X-admin` :2.8
 
 ## 设计理念
 
@@ -88,8 +84,26 @@
 
 #### `system_base`(系统基础表)
 
-| 字段名 | 类型(长度) | 是否为空 | 默认值 | 注释 |
-| :----: | :--------: | :------: | :----: | :--: |
+|    字段名    | 类型(长度)  | 是否为空 |                  默认值                   |       注释       |
+| :----------: | :---------: | :------: | :---------------------------------------: | :--------------: |
+|      id      |   int(10)   |          |                                           |  主键 ,自动编号  |
+| system_title | string(60)  |  false   |               成绩管理系统                |     系统名称     |
+|   keywords   | string(60)  |  false   |            录入,统计,查询,管理            |      关键词      |
+| description  | string(100) |  false   |    成绩采集,成绩统计,成绩查询等功能。     |     网站说明     |
+|    think     | string(80)  |  false   |   ThinkPHP,X-admin,百度 Echarts,jquery    |       致谢       |
+|    danwei    | string(20)  |  false   |                 贵州贵阳                  |     使用单位     |
+|  gradelist   | string(200) |  false   | 一年级,二年级,三年级,四年级,五年级,六年级 |     年级名称     |
+|   classmax   |   int(2)    |  false   |                    30                     |     最大班级     |
+|   xuenian    |   int(11)   |  false   |                 523206000                 |     学年节点     |
+|  xueqishang  |   int(11)   |  false   |                 523206000                 |    上学年节点    |
+|   xueqixia   |   int(11)   |  false   |                 523206000                 |    下学年节点    |
+|  classalias  | boolean(1)  |  false   |                     0                     | 是否开启班级别名 |
+| techerrongyu | boolean(1)  |  false   |                     0                     | 教师查看个人荣誉 |
+|  techerketi  | boolean(1)  |  false   |                     0                     | 教师查看个人课题 |
+|  studentfen  | boolean(1)  |  false   |                     0                     | 是否学生查看分散 |
+|  creat_time  |   int(11)   |  false   |                1539158918                 | 是否学生查看分散 |
+| update_time  |   int(11)   |  false   |                1539158918                 |     更新时间     |
+| delete_time  |   int(11)   |   true   |                                           |     删除时间     |
 
 #### `admin`( 管理员表 )
 
