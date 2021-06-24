@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>系统通知</title>
+        <link rel="stylesheet" href="{__STATIC__}/index/css/lib/semantic.min.css" />
+
+        <link rel="stylesheet" href="{__STATIC__}/index/css/lib/bootstrap.min.css	" />
+        <script src="{__STATIC__}/index/js/lib/jquery-3.1.1.min.js"></script>
+        <script src="{__STATIC__}/index/js/lib/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div>{include file="public/nav"}</div>
+        <br />
+
+        <div>{include file="public/bannar"}</div>
+        <div class="ui container">
+            <h2 class="header">新消息</h2>
+            <div class="ui divider"></div>
+            <div class="ui large relaxed divided list">
+                <div class="item">
+                    <div class="right floated content">
+                        <p>时间：</p>
+                    </div>
+                    <img
+                        class="ui top aligned tiny image"
+                        src="{__STATIC__}/index/img/site_logo/logo.png"
+                    />
+                    <div class="content">
+                        <h4 class="header">系统通知:新书上线</h4>
+                        <div class="description">
+                            介绍自然语言处理和深度学习的核心概念
+                            <a><b style="color: green">《Python自然语言处理实战》</b></a
+                            >电子书已上线。
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="right floated content">
+                        <p>时间：</p>
+                    </div>
+                    <img
+                        class="ui tiny image"
+                        src="{__STATIC__}/index/img/site_logo/logo.png"
+                    />
+                    <div class="content">
+                        <h4 class="header">系统通知:新书上线</h4>
+                        <div class="description">
+                            介绍自然语言处理和深度学习的核心概念
+                            <a><b style="color: green">《Python自然语言处理实战》</b></a
+                            >电子书已上线。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <div class="ui container">
+            <div class="ui divider"></div>
+
+            {include file="public/footer"}
+        </div>
+    </body>
+</html>

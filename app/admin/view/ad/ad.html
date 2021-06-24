@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>广告位管理</title>
+		<link
+			rel="stylesheet"
+			href="{__STATIC__}/admin/js/lib/css/modules/layui.css"
+			media="all"
+		/>
+	</head>
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			{include file="public/base"}
+
+			<div class="layui-body">
+				<div class="layui-carousel" id="test1" lay-filter="test1">
+					<div carousel-item="">
+						<div>条目1</div>
+						<div>条目2</div>
+						<div>条目3</div>
+						<div>条目4</div>
+						<div>条目5</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="{__STATIC__}/admin/js/lib/layui.js"></script>
+		<script>
+			layui.use(["carousel", "form"], function () {
+				var carousel = layui.carousel,
+					form = layui.form;
+
+				//常规轮播
+				carousel.render({
+					elem: "#test1",
+					arrow: "always",
+				});
+			});
+		</script>
+	</body>
+</html>

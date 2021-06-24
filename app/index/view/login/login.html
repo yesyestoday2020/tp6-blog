@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>登陆</title>
+		<link rel="stylesheet" href="{__STATIC__}/index/css/login.css" />
+		<script src="{__STATIC__}/index/js/lib/jquery.js"></script>
+		<script src="{__STATIC__}/index/js/login.js"></script>
+	</head>
+	<body>
+		<div class="center">
+			<div class="container">
+				<div class="text">登陆</div>
+				<form id="form_data" method="POST" action="">
+					<div class="data">
+						<label>姓名:</label>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							required
+							autocomplete="name"
+						/>
+						<div class="message_name"></div>
+					</div>
+					<div class="data">
+						<label>邮箱:</label>
+						<input
+							type="text"
+							name="email"
+							id="email"
+							required
+							autocomplete="email"
+						/>
+						<div class="message_email"></div>
+					</div>
+					<div class="data">
+						<label>密码:</label>
+						<input
+							type="password"
+							name="password"
+							id="password"
+							required
+							autocomplete="current-password"
+						/>
+						<div class="message_password"></div>
+					</div>
+
+					<div class="data">
+						<label>请输入验证码:</label>
+						<!-- 点击更换验证码 -->
+						<img
+							src="{:url('Login/verify')}"
+							alt="captcha"
+							onclick="this.src=this.src+'?'+Math.random()"
+						/>
+						<input
+							type="text"
+							name="captcha"
+							id="captcha"
+							placeholder="验证码"
+							required
+						/>
+					</div>
+					<div class="forget-pass">
+						<a href="forger.html">忘记密码了？</a>
+					</div>
+
+					<div class="btn">
+						<div class="inner"></div>
+						<button type="submit" id="submit">确定</button>
+					</div>
+
+					<div class="register">
+						你是否有登陆账号？如果没有请
+						<a href="register.html">注册</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

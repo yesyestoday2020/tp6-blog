@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>用户列表</title>
+        <link rel="stylesheet" href="{__CSS__}/semantic.min.css" />
+        <link rel="stylesheet" href="{__CSS__}/usershow.css" />
+    </head>
+    <body>
+        {volist name='list' id='vo' }
+        <div class="list">
+            <div class="item">
+                <div class="item_1">{$vo.name}</div>
+                <div class="item_2">{$vo.email}</div>
+                <a href="usermodify.html" class="ui button">修改</a>
+                <a href="userdelect.html" class="ui button">删除</a>
+            </div>
+        </div>
+        {/volist}
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>管理员登陆</title>
+        <link rel="stylesheet" href="{__STATIC__}/admin/css/login.css" />
+        <script src="{__STATIC__}/admin/js/jquery-3.1.1.min.js"></script>
+        <script src="{__STATIC__}/admin/js/usermodify.js"></script>
+    </head>
+    <body>
+        <div class="center">
+            <div class="container">
+                <div class="text">用户资料修改</div>
+                <form id="form_data" method="POST" action="">
+                    <div class="data">
+                        <label>姓名:</label>
+                        <input type="text" name="name" id="name" required autocomplete="name" />
+                        <div class="message_name"></div>
+                    </div>
+                    <div class="data">
+                        <label>邮箱:</label>
+                        <input type="email" name="email" id="email" required autocomplete="email" />
+                        <div class="message_password"></div>
+                    </div>
+
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit" id="submit">修改</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

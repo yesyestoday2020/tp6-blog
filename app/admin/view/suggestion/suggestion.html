@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>用户意见</title>
+        <link
+            rel="stylesheet"
+            href="{__STATIC__}/admin/js/lib/css/modules/layui.css"
+            media="all"
+        />
+    </head>
+    <body class="layui-layout-body">
+        <div class="layui-layout layui-layout-admin">
+            {include file="public/base"}
+
+            <div class="layui-body">
+                <div style="padding: 10px">
+                    <table class="layui-table">
+                        <colgroup>
+                            <col width="100" />
+                            <col width="100" />
+                            <col width="300" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>编号</th>
+                                <th>问题</th>
+                                <th>问题详情</th>
+                                <th>处理</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {volist name="data" id="vo"}
+                            <tr>
+                                <td>{$vo.id}</td>
+                                <td>{$vo.question}</td>
+                                <td>{$vo.content}</td>
+                                <td>
+                                    <button
+                                        type="button"
+                                        class="layui-btn layui-btn-normal"
+                                    >
+                                        已读
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="layui-btn layui-btn-danger"
+                                    >
+                                        删除
+                                    </button>
+                                </td>
+                            </tr>
+                            {/volist}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="{__STATIC__}/admin/js/lib/layui.js"></script>
+        <script>
+            //JavaScript代码区域
+            layui.use("element", function () {
+                var element = layui.element;
+            });
+        </script>
+    </body>
+</html>

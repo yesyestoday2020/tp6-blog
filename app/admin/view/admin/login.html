@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>管理员登陆</title>
+		<link rel="stylesheet" href="{__STATIC__}/admin/css/login.css" />
+	</head>
+	<body>
+		<div class="center">
+			<div class="container">
+				<div class="text">管理员登陆</div>
+				<form id="form_data">
+					<div class="data">
+						<label>姓名:</label>
+						<input
+							type="text"
+							name="admin_user"
+							id="name"
+							required
+							autocomplete="name"
+						/>
+						<div class="message_name"></div>
+					</div>
+					<div class="data">
+						<label>密码:</label>
+						<input
+							type="password"
+							name="admin_password"
+							id="password"
+							required
+							autocomplete="current-password"
+						/>
+						<div class="message_password"></div>
+					</div>
+
+					<div class="forget-pass">
+						<a href="forger.html">忘记密码了？</a>
+					</div>
+
+					<div class="btn">
+						<div class="inner"></div>
+						<button type="submit" id="submit">确定</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="{__STATIC__}/admin/js/lib/jquery.js"></script>
+		<script src="{__STATIC__}/admin/js/login.js"></script>
+	</body>
+</html>

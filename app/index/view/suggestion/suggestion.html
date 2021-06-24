@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>意见反馈</title>
+		<link rel="stylesheet" href="{__STATIC__}/index/css/lib/semantic.min.css" />
+		<script src="{__STATIC__}/index/js/lib/jquery.js"></script>
+		<script src="{__STATIC__}/index/js/suggestion.js"></script>
+	</head>
+	<body>
+		<div>{include file="public/nav"}</div>
+		<br />
+		<div class="ui grid centered">
+			<div class="row"></div>
+			<div class="row eight wide column">
+				<h2 class="">意见反馈</h2>
+			</div>
+			<div class="row">
+				<div class="row"></div>
+				<div class="ui form eight wide column success">
+					<div class="field">
+						<label class="header">标题</label>
+						<!-- 文本区域行数 -->
+						<textarea rows="2" id="question"></textarea>
+					</div>
+
+					<div class="field">
+						<label class="header">问题详情</label>
+						<textarea id="content"></textarea>
+					</div>
+
+					<button class="ui right floated button" id="remove_submit">
+						取消
+					</button>
+					<button class="ui right floated primary submit button" id="submit">
+						提交
+					</button>
+				</div>
+				<div class="row">
+					<div class="eight wide column"></div>
+				</div>
+			</div>
+		</div>
+
+		<br />
+		<div class="ui container">{include file="public/footer"}</div>
+	</body>
+</html>

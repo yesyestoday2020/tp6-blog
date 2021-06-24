@@ -1,0 +1,98 @@
+<div id="main">
+	<div id="soutab"></div>
+	<!-- /header -->
+	<div id="container">
+		<!-- 内容导航区域 -->
+		<nav id="mbx">
+			当前位置:
+			<!-- javascript:void(0); 一个死链接-->
+			<!-- 阻止链接跳转，URL不会有任何变化 -->
+			<a href="javascript:void(0);" onclick="window.history.go(-1);">返回</a> &gt;
+			<a href="/category/{$info.type}">{$headernav[$info['type']]}</a>
+		</nav>
+
+		<!-- 内容文章区域 -->
+		<article class="content">
+			<header class="contenttitle">
+				<a href="javascript:;" class="count"></a>
+				<div class="mscc">
+					<!-- 标题 -->
+					<h1 class="mscctitle">
+						<a>{$info.title}</a>
+					</h1>
+					<!-- 时间 -->
+					<address class="msccaddress">
+						<time>{$info.c_time}</time>
+					</address>
+				</div>
+			</header>
+
+			<!-- 文章内容 -->
+			<div class="content-text">{$info.content|raw}</div>
+		</article>
+
+		<!-- 按钮 -->
+		<div class="button_to_top">
+			<button>返回顶部</button>
+		</div>
+
+		<!--社交分享-->
+		<?php if (!checkWap()): ?>
+		<div class="bdsharebuttonbox">
+			<a href="#" class="bds_more" data-cmd="more"></a
+			><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a
+			><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a
+			><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a
+			><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a
+			><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+		</div>
+
+		<script>
+			//分享设置;
+			window._bd_share_config = {
+				common: {
+					bdSnsKey: {},
+					//分享的内容
+					bdText: "",
+					bdMini: "2",
+					//下拉浮层中的分享按钮类型和排列顺序
+					bdMiniList: false,
+					//分享的图片
+					bdPic: "",
+					bdStyle: "1",
+					//分享按钮的大小
+					bdSize: "24",
+				},
+				share: {},
+			};
+			//js加载部分
+			with (document)
+				(0)[
+					((getElementsByTagName("head")[0] || body).appendChild(
+						createElement("script"),
+					).src =
+						"/static/api/js/share.js?v=89860593.js?cdnversion=" +
+						~(-new Date() / 36e5))
+				];
+		</script>
+		<?php endif; ?>
+		<div class="comment" id="comments">
+			<!--这里填写第三方评论代码-->
+		</div>
+	</div>
+
+	<!-- 侧边栏 -->
+	{include file="public/aside"}
+
+	<!-- /right -->
+	<div class="clear"></div>
+</div>
+<!--main-->
+<script>
+	//向上滚动动画
+	$(function () {
+		$(".button_to_top").click(function () {
+			$("html,body").animate({ scrollTop: "0px" }, 700);
+		});
+	});
+</script>

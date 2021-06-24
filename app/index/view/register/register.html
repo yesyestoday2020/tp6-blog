@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>注册</title>
+		<link rel="stylesheet" href="{__STATIC__}/index/css/login.css" />
+		<script src="{__STATIC__}/index/js/lib/jquery.js"></script>
+		<script src="{__STATIC__}/index/js/register.js"></script>
+	</head>
+	<body>
+		<div class="center">
+			<div class="container">
+				<div class="text">注册</div>
+				<form id="form_data" method="POST">
+					<div class="data">
+						<label>姓名:</label>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							required
+							autocomplete="name"
+						/>
+						<div class="message_name"></div>
+					</div>
+
+					<div class="data">
+						<label>邮箱:</label>
+						<input
+							type="text"
+							name="email"
+							id="email"
+							required
+							autocomplete="email"
+						/>
+						<div class="message_email"></div>
+					</div>
+
+					<div class="data">
+						<label>密码:</label>
+						<input
+							type="password"
+							name="password"
+							id="password"
+							required
+							autocomplete="current-password"
+						/>
+					</div>
+
+					<div class="data">
+						<label>再输入一次确认密码:</label>
+						<input
+							type="password"
+							id="password-confirm"
+							required
+							autocomplete="current-password"
+						/>
+						<div class="message_password"></div>
+					</div>
+
+					<div class="forget-pass">
+						<a href="forger.html">忘记密码了？</a>
+					</div>
+
+					<div class="btn">
+						<div class="inner"></div>
+						<button type="submit" id="submit">点击注册</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
