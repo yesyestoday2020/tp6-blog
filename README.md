@@ -196,6 +196,25 @@
 | update_time |  int(11)   |  false   | 1539158918 |             更新时间             |
 | delete_time |  int(11)   |   true   |            |             删除时间             |
 
+#### `school`(学校表)
+
+|   字段名    | 类型(长度) | 是否为空 |   默认值   |             注释             |
+| :---------: | :--------: | :------: | :--------: | :--------------------------: |
+|     id      |  int(10)   |          |            |        主键 ,自动编号        |
+|    title    | string(25) |  false   |     a      |        学校名称 ,唯一        |
+|  jiancheng  | string(5)  |  false   |     a      |        单位简称 ,唯一        |
+|   biaoshi   | string(11) |   true   |            |           单位标识           |
+| xingzhi_id  |  int(11)   |   true   |            |           单位性质           |
+|  jibie_id   |  int(11)   |   true   |            |           单位级别           |
+| xueduan_id  |  int(11)   |   true   |            |             学段             |
+|   kaoshi    | boolean(1) |  false   |     0      | 是否能组织考试：0=不能，1=能 |
+|   status    | boolean(1) |  false   |     1      |     状态：0=禁用，1=正常     |
+|    paixu    |   int(4)   |  false   |    999     |             排序             |
+| create_time |  int(11)   |  false   | 1539158918 |           创建时间           |
+| update_time |  int(11)   |  false   | 1539158918 |           更新时间           |
+| delete_time |  int(11)   |   true   |            |           删除时间           |
+|   beizhu    | string(80) |   true   |     1      |             备注             |
+
 ====================================================================================
 
 ## 安装配置
